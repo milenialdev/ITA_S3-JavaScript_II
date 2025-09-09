@@ -1,86 +1,111 @@
-# Sprint 3 IT Academy | Video management tool
+## 👤 Author
 
-## Introduction
+Carlos / milenialdev  
+[github.com/milenialdev](https://github.com/milenialdev)
 
-A company in the audiovisual sector has asked us for a web application that will allow their employees to quickly find movies from a large database they have, since the process is currently done manually.
 
-You will be in charge of setting up the core of the application: all the logic of filtering and sorting of movies. You have 2 weeks to finish, which is how long this sprint lasts.
+## 🔀 Branch Workflow: testing, develop and main
 
-<br>
+This project uses a branch-based workflow to organize development and code stability:
 
-## Requirements
+- **`testing` branch**:  
+	This is the branch where daily work happens. Here, new features are developed and tested, bugs are fixed, and all ongoing changes are made. It is an active branch and may contain code that is still in progress or not fully stable.
 
+- **`develop` branch**:  
+	Only stable versions of the project are pushed to this branch. When a feature or set of changes in `testing` has been reviewed and works correctly, it is merged into `develop`. This way, `develop` always contains a functional and stable version of the project, ready for global testing.
+
+- **`main` branch**:  
+	This is the main branch and represents the final, official version of the project. Only versions that have been fully validated and are ready to be delivered or deployed are merged into `main`. The code in `main` should always be stable and production-ready.
+
+**Workflow summary:**
+1. Work and testing are done in `testing`.
+2. When changes are ready and stable, they are merged into `develop`.
+3. When a final version is needed, `develop` is merged into `main`.
+
+This workflow helps keep the code organized, facilitates collaboration, and ensures that the main branch always contains a stable, deliverable version.
+
+
+# 🎬 Sprint 3 IT Academy | Video Management Tool
+
+## 🚀 Introduction
+
+A company in the audiovisual sector requested a web application to help their employees quickly find movies from a large database, as the process was previously manual.
+
+You are responsible for setting up the core of the application: all the logic for filtering and sorting movies. You have 2 weeks to complete this sprint.
+
+---
+
+## 📋 Requirements
 
 1. Clone this repo
 ```bash
-$ git clone https://github.com/IT-Academy-BCN/starter-code-frontend-sprint-3-movies
+git clone https://github.com/IT-Academy-BCN/starter-code-frontend-sprint-3-movies
 ```
 
 2. Unlink your repo from the itacademy repository
 ```bash
-$ git remote rm origin
+git remote rm origin
 ```
 
-3. Link your repo to the repository you have to create in your github account
+3. Link your repo to the repository you create in your GitHub account
 ```bash
-$ git remote add origin <your repo name!>
+git remote add origin <your repo name!>
 ```
 
-<br>
+---
 
-## Submission
+## 📤 Submission
 
 1. Upon completion, run the following commands:
 
 ```bash
-$ git add .
-$ git commit -m "Sprint Solution"
-$ git push origin master
+git add .
+git commit -m "Sprint Solution"
+git push origin master
 ```
 
-2. Create Pull Request.
+2. Create a Pull Request.
 
-3. Upload the link to the virtual campus so that your mentor can correct it and give you feedback.
+3. Upload the link to the virtual campus so your mentor can review and give you feedback.
 
+---
 
-
-<br>
-
-## Introduction
-
-The statement of the exercise is available on the virtual campus.
-
-<br>
-
-## Tests!
-
+## 🧪 Tests
 
 ```shell
-$ npm install
-$ npm run test:watch
+npm install
+npm run test:watch
 ```
 
-And last, open the generated `test-results.html` file with the "Live Server" VSCode extension to see test results.
+Finally, open the generated `test-results.html` file with the "Live Server" VSCode extension to see test results.
 
-Apart from the statement, you will know exactly what you are asked to do by looking at the file `tests/films.spec.js`, all tests are already defined here!
+You will know exactly what you are asked to do by looking at the file `tests/films.spec.js`, where all tests are already defined!
 
-<br>
+---
 
-## Instructions
+## 🛠️ Technologies Used
 
-You have the following indications from the frontend responsible:
+- **JavaScript ES6**: Modern methods like `map`, `filter`, `reduce`, `sort`, `toSorted`, etc.
+- **Node.js**: To run tests and manage dependencies.
+- **Jest**: Testing framework to validate the correct functioning of the functions.
 
-- It is mandatory to implement all loops in ES6 (using map, reduce, filter and sort to manipulate arrays).
+## 🗂️ Structure & Solution
 
-- As at the moment we don't consume data from a server using an API, we will work with data from the src/data.js archive. For the moment we will implement the logic using
-an array of information about 250 movies.
+- All logic is in `src/films.js`.
+- Movie data is in `src/data.js`.
+- Automated tests are in `tests/films.spec.js`.
+- Each function implements an operation on the movie array, using functional programming and ES6 array methods.
+- The main goal is for all functions to pass the defined tests.
 
-- The implementation is about processing this array of movies, to display it as requested in each exercise.
+---
 
-- The logic to implement will be placed in the src/films.js file.
+## 📖 Instructions
 
-- You don't need to show the result of each function on the screen. Your goal is to pass the tests.  More information on how to program oriented to pass tests at the end of the document.
-
-- Don't forget to include the capture of the test results in the virtual campus.
+- All loops must be implemented in ES6 (using map, reduce, filter, and sort to manipulate arrays).
+- As we are not consuming data from a server/API, we work with data from the `src/data.js` file (about 250 movies).
+- The implementation is about processing this array of movies to display it as requested in each exercise.
+- All logic should be placed in the `src/films.js` file.
+- You do not need to display the result of each function on the screen. Your goal is to pass the tests. More information on test-driven programming is at the end of the document.
+- Don't forget to include a screenshot of the test results in the virtual campus.
 
 
